@@ -1,0 +1,9 @@
+#our-history.page header {
+    background-image: url('/assets/images/header-our-history.png');
+}
+
+@media (min-width: 576px){
+    #our-history.page header {
+        background-image: url('/assets/images/header-our-story@2x.png');
+    }
+}

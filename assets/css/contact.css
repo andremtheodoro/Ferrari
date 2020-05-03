@@ -1,0 +1,18 @@
+#contact.page header {
+    background-image: url('/assets/images/header-contact.png');
+}
+
+#contact.page .photos {
+    flex-direction: column;
+}
+
+#contact.page .photos img {
+    width: 100%;
+}
+
+
+@media (min-width: 576px){
+    #contact.page header {
+        background-image: url('/assets/images/header-contact@2x.png');
+    }
+}

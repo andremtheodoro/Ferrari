@@ -1,32 +1,48 @@
-
-
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-body, div, article, aside, footer, header,
-main, nav, section, ul, ol, li, button, figure{
+body,
+div,
+article,
+aside,
+footer,
+header,
+main,
+nav,
+section,
+ul,
+ol,
+li,
+button,
+figure {
     display: flex;
 }
+
 body {
-    margin:0;
+    margin: 0;
     flex-direction: column;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
 }
 
-
 hr.italy {
     background-image: url('/assets/images/bg-italy.svg');
     background-repeat: repeat-x;
     width: 100%;
     height: 20px;
-    margin:0;
+    margin: 0;
     border: none;
 }
 
 .page {
+    flex-direction: column;
+}
+
+.page .page-header {
+    width: 100%;
     flex-direction: column;
 }
 
@@ -47,19 +63,148 @@ hr.italy {
 
 .page header ul,
 .page header li,
-.page header h1{
+.page header h1 {
     margin: 0;
     padding: 0;
 }
 
+form {
+    flex-direction: column;
+    padding: 1em;
+    width: 100%;
+}
+
+form .fields {
+    flex-direction: column;
+}
+
+form .field {
+    position: relative;
+    border: var(--grayC) 2px solid;
+    border-radius: 5px;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 10px;
+}
+
+form .field label {
+    color: var(--grayC);
+    font-size: 14px;
+}
+
+form .field input,
+form .field textarea {
+    line-height: 1.5em;
+    padding: 0.25em 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gray5);
+    border: none;
+    outline: none;
+    font-family: 'Open Sans';
+}
+
+form .actions {
+    flex-direction: column;
+    align-content: center;
+}
+
+form .actions a {
+    display: block;
+    text-align: center;
+    padding: 1em;
+    color: var(--gray6);
+}
+
+form button {
+    width: 100%;
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    padding: 0.5em 1em;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 5px;
+    outline: none;
+}
+
+form button:hover {
+    background-color: var(--green-hover);
+}
+
+form button:active {
+    background-color: var(--green-active);
+}
+
+a {
+    color: var(--red);
+}
+
+a:hover {
+    color: var(--black);
+}
+
+.show-desktop {
+    display: none;
+}
+
+
+/* Daqui para cima é tudo celular - Mobile First */
+
 @media (min-width: 576px) {
     .page header {
         height: 45vh;
+        min-height: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .page .page-header {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .page header .mask {
+        background-color: transparent;
+        align-items: flex-end;
+    }
+    .page header .mask li {
+        font-size: 30px;
+    }
+    .page header .mask h1 {
+        font-size: 100px;
+        text-shadow: 0 3px 6px var(--black15);
+    }
+    form .fields {
+        flex-direction: row;
+    }
+    form .fields .field {
+        margin-right: 1em;
+    }
+    form .fields .field:last-child {
+        margin-right: 0;
+    }
+    form .action a {
+        text-align: right;
+    }
+    form .field textarea {
+        min-height: 250px;
+    }
+    form button {
+        max-width: 340px;
     }
 }
 
 
+/* desktop - telas de 1200px */
 
-
-
-
+@media (min-width: 1200px) {
+    .show-desktop {
+        display: flex;
+    }
+    .hide-desktop {
+        display: none;
+    }
+}

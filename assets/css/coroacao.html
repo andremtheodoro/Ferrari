@@ -1,0 +1,37 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coração</title>
+</head>
+
+<body>
+    <style>
+        .heart {
+            background: red;
+            width: 40px;
+            height: 60px;
+            margin: 15px auto;
+            margin-top: 18em;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            position: relative;
+        }
+        
+        .heart:after {
+            content: '';
+            width: 40px;
+            height: 60px;
+            background: red;
+            border-radius: 50px 50px 0 0;
+            position: absolute;
+            transform: rotate(90deg);
+            left: 10px;
+            bottom: -10px;
+        }
+    </style>
+    <div class="heart"></div>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{
+    "liveServer.settings.port":4500,
+    "liveServe.settings.root": "public/",
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServe.settings.AdvanceCustomBrowserCmdLine":"chrome --incognito --remote-debugging-port=9222",
+    "liveServe.settings.NoBrowerser": false,
+    "liveServe.settings.ignoreFiles" : [
+        ".vscode/**"
+    ]
+}
